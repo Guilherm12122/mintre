@@ -1,5 +1,6 @@
 package com.mintre.web_mintre.entities;
 
+import com.mintre.web_mintre.entities.membro.Membro;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,4 +20,7 @@ public class MembroDepartamento {
     @ManyToOne
     @JoinColumn(name = "departamento_id")
     private Departamento departamento;
+
+    @Column(name = "cargo")
+    private String cargo;
 }

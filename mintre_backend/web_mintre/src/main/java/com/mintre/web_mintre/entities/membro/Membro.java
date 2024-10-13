@@ -1,5 +1,6 @@
-package com.mintre.web_mintre.entities;
+package com.mintre.web_mintre.entities.membro;
 
+import com.mintre.web_mintre.entities.MembroDepartamento;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,11 +18,11 @@ public class Membro {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "url_foto")
+    @Column(name = "url_foto", length = 510)
     private String url_foto;
 
-    @Column(name = "cargo")
-    private String cargo;
+    @Column(name = "telefone")
+    private String telefone;
 
     @OneToMany(mappedBy = "membro", cascade = CascadeType.ALL)
     private Set<MembroDepartamento> membroDepartamentos;
