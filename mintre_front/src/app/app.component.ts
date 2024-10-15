@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Membro } from './membro/membro';
+import { MembroService } from './membro/membro.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'mintre_front';
+
+  membros: Membro[] = []
+
+  constructor(private membroService: MembroService){}
+
+  obtemMembroPorDepartamento(departamento_nome: string){
+    this.membroService.getMembros(departamento_nome)
+      .subscribe((data: Membro[]) => {
+        this.membros = data;
+      })
+  }
 }
