@@ -1,0 +1,76 @@
+/* Estilos para o cabeçalho */
+header {
+  background-color: #ffff;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(211, 210, 210, 0.1);
+  border: 2px solid black;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilos para o menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #8B3393;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-link:hover {
+  background-color: #8B3393; /* Cor de fundo ao passar o mouse */
+  color: white;
+  box-shadow: 0px 4px 15px rgba(219, 197, 222, 0.925);
+}
+
+.user-login-link {
+  color: #8B3393;
+  font-size: 24px;
+}
+
+/* Estilos para tornar o design responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-link {
+    display: block;
+    text-align: center;
+  }
+}
