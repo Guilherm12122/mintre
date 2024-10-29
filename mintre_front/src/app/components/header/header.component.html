@@ -3,9 +3,21 @@
     <div class="logo">
       <img src="assets/logo_mintre.jpg">
     </div>
+
+        
     <ul class="navbar-menu">
       <li class="menu-item">
-        <a href="#" class="menu-link">Departamentos</a>
+        <div class="drop-container" [class.open]="isOpen">
+        <a href="#" (click)="toggleDropdown()" class="menu-link">Departamentos</a>
+
+        <div class="drop-menu" [ngClass]="{ 'show': isOpen }">
+          <!-- <p>Teste</p> -->
+          <ul>
+            <li *ngFor="let option of options">{{ option }}</li>
+          </ul>
+        </div>
+        </div>
+
       </li>
       <li class="menu-item">
         <a href="#" class="menu-link">Eventos</a>

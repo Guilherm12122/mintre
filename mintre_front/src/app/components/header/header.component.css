@@ -24,6 +24,9 @@ header {
   letter-spacing: 1px;
 }
 
+
+
+
 /* Estilos para o menu */
 .navbar-menu {
   list-style: none;
@@ -70,6 +73,56 @@ header {
   /* width: 50px;
   height: 50px; */
 }
+
+.drop-container {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #8B3393;
+  color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px); /* Início acima */
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  padding: 0; /* Sem padding quando está oculto */
+
+  li {
+    list-style: none;
+  }
+}
+
+.drop-container.open .menu-link{
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #8B3393;
+  /* height: 50px; Mantém a altura fixa do botão */
+}
+
+.drop-menu.show {
+  max-height: 200px; /* Altura máxima da lista aberta */
+  opacity: 1;
+  transform: translateY(0); /* Desliza para a posição final */
+  /* padding-right: 50px; */
+  margin-top: 5px;
+
+  li {
+    list-style: none;
+    margin-right: 100px;
+    padding: 5px;
+    /* text-align: right; */
+  }
+}
+
+
 
 /* Estilos para tornar o design responsivo */
 @media (max-width: 768px) {

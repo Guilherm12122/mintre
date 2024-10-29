@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  isOpen = false;
+  options = ['Mídia', 'Infantil', 'Educação', 'Pastoral']; // Substitua conforme necessário
 
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
 }
