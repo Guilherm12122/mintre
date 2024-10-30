@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,15 @@ export class HeaderComponent {
   isOpen = false;
   options = ['Mídia', 'Infantil', 'Educação', 'Pastoral']; // Substitua conforme necessário
 
-  toggleDropdown() {
+  toggleDropdown(event:  Event) {
+    event.stopPropagation()
     this.isOpen = !this.isOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeDropDown(){
+    if(this.isOpen){
+      this.isOpen = false;
+    }
   }
 }

@@ -111,17 +111,32 @@ header {
   max-height: 200px; /* Altura máxima da lista aberta */
   opacity: 1;
   transform: translateY(0); /* Desliza para a posição final */
-  /* padding-right: 50px; */
   margin-top: 5px;
+  /* text-align: left; */
+  /* padding-right: 50px; */
+
+  ul {
+    /* border: 1px solid black; */
+    padding-right: 45px;
+    text-align: center;
+  }
 
   li {
     list-style: none;
-    margin-right: 100px;
+    /* margin-right: 100px; */
+    /* border: 1px solid black; */
     padding: 5px;
-    /* text-align: right; */
   }
 }
 
+.drop-menu.show li{ 
+  cursor: default;
+}
+
+.drop-menu.show li:hover{
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+  box-shadow: 0 4px 8px rgba(74, 74, 74, 0);
+}
 
 
 /* Estilos para tornar o design responsivo */

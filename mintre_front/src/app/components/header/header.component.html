@@ -8,7 +8,7 @@
     <ul class="navbar-menu">
       <li class="menu-item">
         <div class="drop-container" [class.open]="isOpen">
-        <a href="#" (click)="toggleDropdown()" class="menu-link">Departamentos</a>
+        <a href="#" (click)="toggleDropdown($event)" class="menu-link">Departamentos</a>
 
         <div class="drop-menu" [ngClass]="{ 'show': isOpen }">
           <!-- <p>Teste</p> -->
