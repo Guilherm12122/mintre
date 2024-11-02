@@ -1,0 +1,157 @@
+/* Estilos para o cabeçalho */
+header {
+  background-color: #000000;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(16, 15, 15, 0.249);
+  /* border: 1px solid black; */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+
+/* Estilos para o menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  /* background-color: white; */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-link:hover {
+  background-color: #8B3393; /* Cor de fundo ao passar o mouse */
+  color: white;
+  box-shadow: 0px 4px 15px rgba(219, 197, 222, 0.329);
+}
+
+.user-login-link i{
+  color: #ffff;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.user-login-link:hover i {
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+  box-shadow: 0 4px 8px rgba(74, 74, 74, 0); /* Adiciona uma sombra suave */
+}
+
+.logo{
+  margin-top: 5px;
+  /* border: 2px solid black; */
+  /* width: 50px;
+  height: 50px; */
+}
+
+.drop-container {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #8B3393;
+  color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px); /* Início acima */
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  padding: 0; /* Sem padding quando está oculto */
+
+  li {
+    list-style: none;
+  }
+}
+
+.drop-container.open .menu-link{
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #8B3393;
+  /* height: 50px; Mantém a altura fixa do botão */
+}
+
+.drop-menu.show {
+  max-height: 200px; /* Altura máxima da lista aberta */
+  opacity: 1;
+  transform: translateY(0); /* Desliza para a posição final */
+  margin-top: 5px;
+  /* text-align: left; */
+  /* padding-right: 50px; */
+
+  ul {
+    /* border: 1px solid black; */
+    padding-right: 45px;
+    text-align: center;
+  }
+
+  li {
+    list-style: none;
+    /* margin-right: 100px; */
+    /* border: 1px solid black; */
+    padding: 5px;
+  }
+}
+
+.drop-menu.show li{ 
+  cursor: default;
+}
+
+.drop-menu.show li:hover{
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+  box-shadow: 0 4px 8px rgba(74, 74, 74, 0);
+}
+
+
+/* Estilos para tornar o design responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-link {
+    display: block;
+    text-align: center;
+  }
+}

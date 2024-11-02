@@ -9,14 +9,14 @@ import { MembroService } from './membro/membro.service';
 })
 export class AppComponent {
 
-  membros: Membro[] = []
+  // membros: Membro[] = []
 
-  constructor(private membroService: MembroService){}
+  // constructor(private membroService: MembroService){}
 
-  obtemMembroPorDepartamento(departamento_nome: string){
-    this.membroService.getMembros(departamento_nome)
-      .subscribe((data: Membro[]) => {
-        this.membros = data;
-      })
-  }
+  // obtemMembroPorDepartamento(departamento_nome: string){
+  //   this.membroService.getMembros(departamento_nome)
+  //     .subscribe((data: Membro[]) => {
+  //       this.membros = data;
+  //     })
+  // }
 }

@@ -1,0 +1,8 @@
+footer {
+    background-color: #000000;
+    color: white;
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(51, 51, 51, 0) 90%);
+    text-align: center;
+    height: 50px;
+    padding-top: 300px;
+}
