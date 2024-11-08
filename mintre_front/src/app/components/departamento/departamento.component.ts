@@ -9,14 +9,16 @@ import { DataserviceService } from '../../dataservice/dataservice.service';
 })
 export class DepartamentoComponent {
 
-  data: any;
+  membros: Membro[] = [];
 
   constructor(private dataService: DataserviceService){}
 
-  ngOnInit() {
-    this.dataService.data$.subscribe(dados => {
-      this.data = dados;
-      console.log(this.data);
-    })
+  ngOnInit(){
+    this.dataService.data$.subscribe(
+      (data: Membro[]) => {
+        this.membros = data;
+        console.log(this.membros);
+      }
+    );
   }
 }
