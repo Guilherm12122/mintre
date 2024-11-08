@@ -24,6 +24,9 @@ header {
   letter-spacing: 1px;
 }
 
+.logo img {
+  cursor: pointer;
+}
 
 
 
@@ -48,6 +51,7 @@ header {
   transition: background-color 0.3s, color 0.3s;
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .menu-link:hover {
@@ -130,12 +134,17 @@ header {
 }
 
 .drop-menu.show li{ 
-  cursor: default;
+  cursor: pointer;
 }
 
 .drop-menu.show li:hover{
   transform: scale(1.2); /* Aumenta o ícone em 20% */
   box-shadow: 0 4px 8px rgba(74, 74, 74, 0);
+}
+
+li a {
+  text-decoration: none;
+  color: white;
 }
 
 

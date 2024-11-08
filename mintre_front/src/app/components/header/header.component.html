@@ -1,19 +1,22 @@
 <header>
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logo_mintre.jpg">
+      <!-- <img src="assets/logo_mintre.jpg"> -->
+      <img routerLink="" src="assets/logo_mintre.jpg">
     </div>
 
         
     <ul class="navbar-menu">
       <li class="menu-item">
         <div class="drop-container" [class.open]="isOpen">
-        <a href="#" (click)="toggleDropdown($event)" class="menu-link">Departamentos</a>
+        <a (click)="toggleDropdown($event)" class="menu-link">Departamentos</a>
 
         <div class="drop-menu" [ngClass]="{ 'show': isOpen }">
           <!-- <p>Teste</p> -->
           <ul>
-            <li *ngFor="let option of options">{{ option }}</li>
+            <li *ngFor="let option of options">
+              <a (click)="obtemMembroPorDepartamento(option)" routerLink="departamentos">{{ option }}</a>
+            </li>
           </ul>
         </div>
         </div>
