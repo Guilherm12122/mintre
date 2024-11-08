@@ -12,11 +12,9 @@ export class MembroService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getMembros(departamento_nome: string): Observable<Membro[]>{
-    return this.httpClient.get<Membro[]>(this.urlMembro + "/" + departamento_nome)
-      .pipe(
-        map((response: any) => response.map((user: any) => 
-        new Membro(user.id, user.nome, user.url_foto, user.telefone, user.cargo)))
-      );
-  }
+  getMembros(departamento_nome: string){
+    
+    return this.httpClient.get(this.urlMembro + "/" + departamento_nome);
+
+    }
 }
