@@ -1,8 +1,13 @@
 <app-header></app-header>
 
-<!-- <div *ngFor="let membro of membros">
-    <p> {{membro.nome}} </p>
-    <p> {{membro.cargo}} </p>
-    <p> {{membro.url_foto}} </p>
-    <p> {{membro.telefone}} </p>
-  </div> -->
+<div class="container">
+<div class="card" *ngFor="let membro of membros">
+  <app-card
+    nome_pessoa="{{ membro.nome }}"
+    cargo="{{ membro.cargo }}"
+    imageUrl="{{ 'https://th.bing.com/th/id/OIP.jWh8MFdlkRysK7Pq3l4RDwHaEW?rs=1&pid=ImgDetMain' }}"
+    telefone="{{ membro.telefone }}">
+  </app-card>
+</div>
+</div>
+<!-- imageUrl="{{ membro.url_foto }}" -->

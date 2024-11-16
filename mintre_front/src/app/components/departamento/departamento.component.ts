@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Membro } from '../../membro/membro';
 import { DataserviceService } from '../../dataservice/dataservice.service';
 
