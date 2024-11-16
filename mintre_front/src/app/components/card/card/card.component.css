@@ -1,0 +1,19 @@
+.card-membro {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  mat-card-content {
+    margin-top: 10px;
+  }
+
+  .card-membro{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-membro:hover {
+    transform: scale(1.1);
+  }

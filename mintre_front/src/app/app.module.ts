@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DepartamentoComponent } from './components/departamento/departamento.component';
+import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './components/card/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { DepartamentoComponent } from './components/departamento/departamento.co
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    DepartamentoComponent
+    DepartamentoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { DepartamentoComponent } from './components/departamento/departamento.co
     MatToolbarModule,
     HttpClientModule,
     RouterOutlet,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [
     provideClientHydration(),

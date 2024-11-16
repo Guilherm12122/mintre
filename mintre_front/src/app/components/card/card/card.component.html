@@ -1,0 +1,14 @@
+<mat-card class="card-membro">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" 
+        [style.backgroundImage]="'url(' + imageUrl + ')'"></div>
+      <mat-card-title>{{ nome_pessoa }}</mat-card-title>
+      <mat-card-subtitle>{{ cargo }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="imageUrl" [src]="imageUrl" 
+        alt="Foto do membro do departamento" width="380px">
+    <mat-card-content>
+      <p><strong>Contato:</strong> {{ telefone }}</p>
+    </mat-card-content>
+  </mat-card>
+  
