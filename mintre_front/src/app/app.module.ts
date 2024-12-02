@@ -14,6 +14,7 @@ import { DepartamentoComponent } from './components/departamento/departamento.co
 import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './components/card/card/card.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     RouterOutlet,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

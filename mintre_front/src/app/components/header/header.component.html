@@ -29,10 +29,11 @@
         <a href="#" class="menu-link">História</a>
       </li>
       <div class="user-icon">
-        <a routerLink="/login" class="user-login-link">
+        <a (click)="mostrarFormsLogin()" class="user-login-link">
           <i class="fas fa-user"></i>
         </a>
       </div>
     </ul>
   </nav>
 </header>
+<app-login *ngIf="isLoginVisible" (close)="esconderFormsLogin()"></app-login>
