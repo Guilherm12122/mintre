@@ -12,7 +12,10 @@ export class LoginComponent {
 
   usuario: Usuario = {email: '', senha: ''};
 
+  constructor(private loginService: LoginService){}
+
   onSubmit() {
+    console.log(this.loginService.login(this.usuario));
     // Aqui você pode chamar um serviço de autenticação
     // alert(`Login realizado: ${this.username}`);
     this.close.emit(); // Fecha o modal após o login
