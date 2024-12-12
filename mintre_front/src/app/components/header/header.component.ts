@@ -11,6 +11,7 @@ import { DataserviceService } from '../../dataservice/dataservice.service';
 export class HeaderComponent {
   isOpen = false;
   options = ['Mídia', 'Infantil', 'Educação', 'Pastoral']; // Substitua conforme necessário
+  isLoginVisible: boolean = false;
 
   constructor(private membroService: MembroService, 
     private dataService: DataserviceService){}
@@ -20,6 +21,14 @@ export class HeaderComponent {
       .subscribe(apiData => {
         this.dataService.updateData(apiData);
       })
+  }
+
+  mostrarFormsLogin(){
+    this.isLoginVisible = true;
+  }
+
+  esconderFormsLogin(){
+    this.isLoginVisible = false;
   }
 
   toggleDropdown(event:  Event) {

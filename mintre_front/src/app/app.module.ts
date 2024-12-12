@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DepartamentoComponent } from './components/departamento/departamento.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './components/card/card/card.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { CardComponent } from './components/card/card/card.component';
     HeaderComponent,
     FooterComponent,
     DepartamentoComponent,
-    CardComponent
+    CardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { CardComponent } from './components/card/card/card.component';
     HttpClientModule,
     RouterOutlet,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),
