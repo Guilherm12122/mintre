@@ -22,7 +22,7 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody UsuarioDto usuario) {
         String token = authService.returnToken(usuario.getEmail(), usuario.getSenha());
-        return (!token.isEmpty()) ? ResponseEntity.ok(new AuthResponse(token, "Logado.")) : ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new AuthResponse(token, "Email ou senha inválida."));
+        return (!token.isEmpty()) ? ResponseEntity.ok(new AuthResponse(token, "Logado.")) : ResponseEntity.status(HttpStatus.OK).body(new AuthResponse(token, "Email ou senha inválida."));
     }
 
     @PostMapping("/logout")

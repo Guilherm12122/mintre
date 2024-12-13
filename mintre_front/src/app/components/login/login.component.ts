@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Usuario } from '../../usuario/usuario';
 import { LoginService } from '../../loginservice/login.service';
+import { AuthResponse } from '../../authresponse/authresponse';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,16 @@ export class LoginComponent {
   constructor(private loginService: LoginService){}
 
   onSubmit() {
-    console.log(this.loginService.login(this.usuario));
+    this.loginService.login(this.usuario).subscribe(
+      {
+        next: (response: AuthResponse) => {
+          console.log('Resposta:', response);
+        },
+        error: (err) => {
+          console.error('Erro:', err);
+        },
+      }
+    );
     // Aqui você pode chamar um serviço de autenticação
     // alert(`Login realizado: ${this.username}`);
     this.close.emit(); // Fecha o modal após o login
