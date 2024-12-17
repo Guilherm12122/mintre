@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './components/card/card/card.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     DepartamentoComponent,
     CardComponent,
-    LoginComponent
+    LoginComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
