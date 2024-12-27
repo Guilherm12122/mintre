@@ -1,5 +1,6 @@
 import { Component, Injectable, Input } from '@angular/core';
 import { AuthResponse } from '../../authresponse/authresponse';
+import { Colors } from '../../enums/colors';
 
 @Component({
   selector: 'app-alert',
@@ -10,12 +11,19 @@ import { AuthResponse } from '../../authresponse/authresponse';
 @Injectable()
 export class AlertComponent {
 
-  constructor(){}
+  @Input() status = '';
+  @Input() msg = '';
 
-  statusDataAlert = {color: '', msg_alert: ''}
+  color: string = '';
 
-  defineAlertProperties(statusLogin: string, authresponse: AuthResponse){
-    this.statusDataAlert.color = (statusLogin == 'sucess') ? 'green' : 'red'; 
-    this.statusDataAlert.msg_alert = authresponse.msg;
+  ngOnInit(): void {
+    this.color = (this.status == 'sucess') ? Colors.DARK_GREEN : Colors.LIGHT_RED;
+
+    setTimeout(() => {
+      const alertElement = document.querySelector('.alert');
+      if (alertElement) {
+        alertElement.classList.add('exit'); // Adiciona animação de saída
+      }
+    }, 1000);
   }
 }

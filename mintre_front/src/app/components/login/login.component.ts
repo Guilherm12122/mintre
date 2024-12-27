@@ -19,22 +19,23 @@ export class LoginComponent {
   auth_response: AuthResponse = {token: '', msg: ''};
   statusLogin: string = '';
 
-  constructor(private loginService: LoginService, private alert: AlertComponent){}
+  constructor(private loginService: LoginService){}
 
   onSubmit() {
     this.loginService.login(this.usuario).subscribe(
       {
         next: (response: AuthResponse) => {
           this.auth_response = response;
+          console.log("Resposta: ", this.auth_response);
+          console.log(this.verifyBodyAuthResponse())
           this.validateLogin(this.auth_response);
-          this.alert.defineAlertProperties(this.statusLogin, this.auth_response);
         },
         error: (err) => {
           console.error('Erro:', err);
         },
       }
     );
-    this.close.emit();
+    // this.close.emit();
   }
 
   verifyBodyAuthResponse(){

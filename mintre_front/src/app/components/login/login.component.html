@@ -1,12 +1,17 @@
 <div class="modal-backdrop" (click)="closeModal()"></div>
 <div class="modal-content">
-  <!-- <app-alert *ngIf="verifyBodyAuthResponse()"></app-alert> -->
+  <div class="alert_style">
+    <app-alert *ngIf="verifyBodyAuthResponse()"
+      status="{{ statusLogin }}"
+      msg="{{ auth_response.msg }}"
+    ></app-alert>
+  </div>
   <form (ngSubmit)="onSubmit()">
     <h2>Login</h2>
     <label for="email">Email:</label>
     <input id="email" type="email" [(ngModel)]="usuario.email" name="email" required />
 
-    <label for="password">Password:</label>
+    <label for="password">Senha:</label>
     <input id="password" type="password" [(ngModel)]="usuario.senha" name="password" required />
 
     <button type="submit">Login</button>
