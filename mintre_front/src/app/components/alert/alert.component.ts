@@ -22,7 +22,7 @@ export class AlertComponent {
     setTimeout(() => {
       const alertElement = document.querySelector('.alert');
       if (alertElement) {
-        alertElement.classList.add('exit'); // Adiciona animação de saída
+        alertElement.classList.add('exit');
       }
     }, 1000);
   }

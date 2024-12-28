@@ -1,7 +1,7 @@
 <div class="modal-backdrop" (click)="closeModal()"></div>
 <div class="modal-content">
   <div class="alert_style">
-    <app-alert *ngIf="verifyBodyAuthResponse()"
+    <app-alert *ngIf="showLogin"
       status="{{ statusLogin }}"
       msg="{{ auth_response.msg }}"
     ></app-alert>
